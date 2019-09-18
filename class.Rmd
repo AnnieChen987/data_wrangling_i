@@ -1,5 +1,5 @@
 ---
-title: "class"
+title: "Data Import class"
 author: "Yineng Chen"
 date: "2019/9/17"
 output: html_document
@@ -9,5 +9,70 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
+
 ```
+## load in a data
+```{r}
+## reads in a dataset
+litters_data = read_csv(file = "./Data/FAS_litters.csv")
+litter_data = janitor::clean_names(litters_data)
+```
+
+## try
+```{r}
+pups_data = read_csv(file = "./Data/FAS_pups.csv")
+pups_data = janitor::clean_names(pups_data)
+
+
+```
+
+1. use view(df) in console
+1. you can head() and tail()
+1. skimr::skim()to skim summary statistics
+1.
+
+```{r}
+litters_data = read_csv(file = "./Data/FAS_litters.csv",
+  skip = 10, col_names = FALSE)
+```
+
+## Parsing columns
+```{r}
+litters_data = read_csv(file = "./data/FAS_litters.csv",
+  col_types = cols(
+    Group = col_character(),
+    `Litter Number` = col_character(),    ##有空格的要加“”
+    `GD0 weight` = col_double(),
+    `GD18 weight` = col_double(),
+    `GD of Birth` = col_integer(),
+    `Pups born alive` = col_integer(),
+    `Pups dead @ birth` = col_integer(),
+    `Pups survive` = col_integer()
+  )
+)
+```
+
+## Read in a excel file
+
+```{r}
+library(readxl)
+mlb11_data = read_excel("./Data/mlb11.xlsx", n_max = 20)
+head(mlb11_data, 5)
+
+
+```
+## read in SAS
+```{r}
+pluse_data = haven::read_sas("./Data/public_pulse_data.sas7bdat")
+```
+
+```{r}
+mlb11_data_extra = 
+     read_excel(path = "./Data/mlb11.xlsx", 
+                range = "A1:D7")
+write_csv(mlb11_data_extra, path = "./Data/try export.csv")
+```
+
+1. use read_csv instead of read.csv
+
 
