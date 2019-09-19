@@ -1,0 +1,3 @@
+"0","litters_data = janitor::clean_names(litters_data)
+"
+"2","strings not representable in native encoding will be translated to UTF-8"

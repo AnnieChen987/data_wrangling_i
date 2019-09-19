@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1568894956005.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "934719571",
+    "id" : "EF478DC9",
+    "lastKnownWriteTime" : 1568895794,
+    "last_content_update" : 1568895794441,
+    "path" : "E:/我写的R/Data Science/Data_Wrangling/data_wrangling_i/dplyer_example_class.Rmd",
+    "project_path" : "dplyer_example_class.Rmd",
+    "properties" : {
+        "cursorPosition" : "50,66",
+        "last_setup_crc32" : "CB39659B799ae064",
+        "scrollLine" : "38",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
